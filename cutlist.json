@@ -1,0 +1,86 @@
+{
+  "audio": "Launch Trailer source audio kept (AAC 128k). Trailer 2's licensed music NOT used.",
+  "candidate": "C",
+  "competition": "gta6-clipper-01",
+  "concept": "Cinematic Vice City \u2014 the most beautiful/atmospheric Vice City sequence (neon, ocean, skyline, sunset): a 'welcome back to Vice City' feeling. Hook with the most gorgeous shot first (beach aerial with pink plane), then night skyline, pink-sunset logo, convertible + sunset wading, Keys/marina/boat/seaplane, golden-hour rooftop + balcony embrace, close on the OUT NOW night skyline.",
+  "crop_filter": "crop=1216:2160:1312:0 (center 9:16 slice of the 3840x2160 frame), scale=1080:1920, setsar=1 \u2014 vertical Short, no squish. Same crop applied to every segment.",
+  "duration_seconds": 30.5,
+  "ffmpeg_command": "ffmpeg -y -i GTAVI_Launch_Trailer.mp4 -filter_complex \"[0:v]trim=start=55:end=58,setpts=PTS-STARTPTS,crop=1216:2160:1312:0,scale=1080:1920,setsar=1[v0]; [0:v]trim=start=17:end=20,setpts=PTS-STARTPTS,crop=1216:2160:1312:0,scale=1080:1920,setsar=1[v1]; [0:v]trim=start=24:end=28.5,setpts=PTS-STARTPTS,crop=1216:2160:1312:0,scale=1080:1920,setsar=1[v2]; [0:v]trim=start=3:end=13,setpts=PTS-STARTPTS,crop=1216:2160:1312:0,scale=1080:1920,setsar=1[v3]; [0:v]trim=start=63:end=65,setpts=PTS-STARTPTS,crop=1216:2160:1312:0,scale=1080:1920,setsar=1[v4]; [0:v]trim=start=67:end=69.5,setpts=PTS-STARTPTS,crop=1216:2160:1312:0,scale=1080:1920,setsar=1[v5]; [0:v]trim=start=80:end=85.5,setpts=PTS-STARTPTS,crop=1216:2160:1312:0,scale=1080:1920,setsar=1[v6]; [v0][v1][v2][v3][v4][v5][v6]concat=n=7:v=1:a=0,drawtext=fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf:text='WELCOME BACK TO VICE CITY':fontsize=64:fontcolor=white:box=1:boxcolor=black@0.55:boxborderw=18:x=(w-text_w)/2:y=140:enable='between(t,0.5,4.0)',drawtext=fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf:text='MAKE MONEY MAKING':fontsize=64:fontcolor=white:box=1:boxcolor=black@0.55:boxborderw=18:x=(w-text_w)/2:y=1400:enable='between(t,20.5,25.0)',drawtext=fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf:text='CLIPS WITH AI - make.fun':fontsize=56:fontcolor=white:box=1:boxcolor=black@0.55:boxborderw=18:x=(w-text_w)/2:y=1500:enable='between(t,20.5,25.0)',drawtext=fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf:text='make.fun':fontsize=96:fontcolor=white:box=1:boxcolor=black@0.55:boxborderw=20:x=(w-text_w)/2:y=380:enable='between(t,25.5,30.5)',drawtext=fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf:text='PLAY CODE':fontsize=48:fontcolor=white:box=1:boxcolor=black@0.55:boxborderw=16:x=(w-text_w)/2:y=540:enable='between(t,25.5,30.5)',drawtext=fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf:text='makefun-crystal-cotton-tarragon':fontsize=44:fontcolor=white:box=1:boxcolor=black@0.55:boxborderw=16:x=(w-text_w)/2:y=620:enable='between(t,25.5,30.5)'[vout]; [0:a]atrim=start=55:end=58,asetpts=PTS-STARTPTS[a0]; [0:a]atrim=start=17:end=20,asetpts=PTS-STARTPTS[a1]; [0:a]atrim=start=24:end=28.5,asetpts=PTS-STARTPTS[a2]; [0:a]atrim=start=3:end=13,asetpts=PTS-STARTPTS[a3]; [0:a]atrim=start=63:end=65,asetpts=PTS-STARTPTS[a4]; [0:a]atrim=start=67:end=69.5,asetpts=PTS-STARTPTS[a5]; [0:a]atrim=start=80:end=85.5,asetpts=PTS-STARTPTS[a6]; [a0][a1][a2][a3][a4][a5][a6]concat=n=7:v=0:a=1[aout]\" -map \"[vout]\" -map \"[aout]\" -c:v libx264 -crf 20 -preset fast -pix_fmt yuv420p -c:a aac -b:a 128k -movflags +faststart clip.mp4",
+  "in_seconds": 0,
+  "note": "in_seconds/out_seconds (0 / 30.5) describe the ASSEMBLED clip timeline; per-segment source timestamps are in segments[]. main.ts validates out-in == duration_seconds (30.5) and clip.mp4 duration within 0.5s. VIDEO.json still holds the PENDING_UPLOAD_BY_COY placeholder \u2014 replace only after coy posts the clip to @hendryzu himself.",
+  "on_screen_text": [
+    {
+      "t": "0.5-4.0",
+      "text": "WELCOME BACK TO VICE CITY"
+    },
+    {
+      "t": "20.5-25.0",
+      "text": "MAKE MONEY MAKING / CLIPS WITH AI - make.fun"
+    },
+    {
+      "t": "25.5-30.5",
+      "text": "make.fun / PLAY CODE / makefun-crystal-cotton-tarragon (moved to y=380/540/620, top of frame, after v1 check showed the code colliding with the footage's own OUT NOW text at y~1050)"
+    }
+  ],
+  "out_seconds": 30.5,
+  "pitch_text": "MAKE MONEY MAKING CLIPS WITH AI - make.fun \u2014 Play code: makefun-crystal-cotton-tarragon",
+  "play_code": "makefun-crystal-cotton-tarragon",
+  "segments": [
+    {
+      "n": 1,
+      "seconds": 3.0,
+      "shot": "Beach aerial, pink-smoke biplane over turquoise water + crowded beach + skyline \u2014 THE HOOK",
+      "source_in": 55.0,
+      "source_out": 58.0
+    },
+    {
+      "n": 2,
+      "seconds": 3.0,
+      "shot": "Night skyline aerial, then green lowrider convertible in sun flare",
+      "source_in": 17.0,
+      "source_out": 20.0
+    },
+    {
+      "n": 3,
+      "seconds": 4.5,
+      "shot": "GTA VI logo over pink sunset skyline + palms, Lucia & Jason in convertible, sunset wading silhouettes",
+      "source_in": 24.0,
+      "source_out": 28.5
+    },
+    {
+      "n": 4,
+      "seconds": 10.0,
+      "shot": "'The Keys' sign, marina aerial, Jason polishing the boat, boat with Lucia in sun glare, seaplane over turquoise water",
+      "source_in": 3.0,
+      "source_out": 13.0
+    },
+    {
+      "n": 5,
+      "seconds": 2.0,
+      "shot": "Lucia on rooftop at sunset, orange sky",
+      "source_in": 63.0,
+      "source_out": 65.0
+    },
+    {
+      "n": 6,
+      "seconds": 2.5,
+      "shot": "Lucia & Jason embrace on balcony at golden hour, sun over the ocean",
+      "source_in": 67.0,
+      "source_out": 69.5
+    },
+    {
+      "n": 7,
+      "seconds": 5.5,
+      "shot": "OUT NOW over the Vice City night skyline \u2014 natural closer with the game's own branding",
+      "source_in": 80.0,
+      "source_out": 85.5
+    }
+  ],
+  "source": "Rockstar Games GTA VI Launch Trailer (official, 15 Oct 2026)",
+  "source_channel": "Rockstar Games",
+  "source_duration_seconds": 89.17,
+  "source_file": "GTAVI_Launch_Trailer.mp4",
+  "source_title": "Grand Theft Auto VI \u2014 Launch Trailer",
+  "source_url": "https://www.rockstargames.com/VI/media/videos",
+  "why_this_moment": "Scrubbed all 89 frames of the Launch Trailer (fps=1 contact sheets, viewed). The trailer's beauty peaks are the beach aerial (55s), the night skyline (17s), the pink-sunset logo (24s) and the golden-hour balcony embrace (67s) \u2014 every one of them reads instantly at phone size, no dialogue needed. The montage opens with the single most postcard-perfect shot (beach + pink plane) so the Short hooks in under a second, then runs day->night->sunset->night as a love letter to Vice City, and closes on Rockstar's own OUT NOW card. No Trailer 2 footage (licensed music / Content ID risk). No DEANKT VOD \u2014 the VOD fetch is blocked (YouTube throttles DASH, --download-sections fails on this live VOD)."
+}
